@@ -1,28 +1,53 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"src/components/screens/Home/Home.module.scss",
+		"src/components/layout/Layout.module.scss",
+		"src/components/layout/sidebar/SideBar.module.scss",
+		"src/components/ui/TextArea/TextArea.module.scss",
+		"src/components/ui/Button/Button.module.scss",
+		"src/components/screens/Channel/Channel.module.scss",
+		"src/components/screens/Home/catalog/Catalog.moudle.scss",
+		"src/components/ui/heading/Heading.module.scss",
+		"src/components/screens/descover/Discover.module.scss",
+		"src/components/ui/video-item/VideoItem.module.scss",
+		"src/components/ui/subscribe-button/SubscribeButton.module.scss",
+		"src/components/ui/channel-info-small/ChannelInfoSmall.module.scss",
+		"src/components/screens/video/video-detail/VideoDeta",
+		"src/components/screens/Studio/Studio.module.sscs",
+		"src/components/screens/video-edit/VideoEdit.module.scss",
+		"src/components/layout/header/upload-video/toggle-public/TogglePublic.module.scss",
+		"src/app/layout.module.scss",
+		"src/components/screens/video/video-player/VideoPlayer.module.scss",
+		"src/components/ui/upload-field/UploadField.module.scss",
+		"src/components/layout/header/upload-video/footer-form/FooterForm.module.scss"
+	],
+	"exclude": ["node_modules"]
 }

@@ -1,20 +1,43 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.2.1",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "next": "13.4.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.0.4"
-  }
+	"name": "client",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.9.5",
+		"@types/node": "20.2.1",
+		"@types/react": "18.2.6",
+		"@types/react-dom": "18.2.4",
+		"axios": "^1.4.0",
+		"clsx": "^1.2.1",
+		"dayjs": "^1.11.7",
+		"debug": "^4.3.4",
+		"follow-redirects": "^1.15.2",
+		"framer-motion": "^10.15.1",
+		"lodash": "^4.17.21",
+		"next": "13.4.5",
+		"nextjs-progressbar": "^0.0.16",
+		"prettier": "^2.8.8",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-hook-form": "^7.43.9",
+		"react-icons": "^4.8.0",
+		"react-loading-skeleton": "^3.3.1",
+		"react-persist": "^1.0.2",
+		"react-query": "^3.39.3",
+		"react-redux": "^8.0.5",
+		"react-redux-toastr": "^7.6.11",
+		"redux-persist": "^6.0.0",
+		"sass": "^1.62.1",
+		"typescript": "5.0.4"
+	},
+	"devDependencies": {
+		"@types/react-redux-toastr": "^7.6.2",
+		"@types/redux-persist": "^4.3.1"
+	}
 }

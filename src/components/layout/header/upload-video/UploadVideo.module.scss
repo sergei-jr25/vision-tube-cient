@@ -1,0 +1,108 @@
+/* Стили для фона модального окна */
+.modal {
+	/* Полупрозрачный черный фон */
+	background-color: rgba(0, 0, 0, 0.3);
+	/* Позиционирование на всю страницу */
+	position: fixed;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	height: 500px;
+	z-index: 4;
+
+	&__form {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		background-color: #1a202c;
+
+		padding: 20px;
+
+		border-radius: 8px;
+
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+
+	&__body {
+		margin-bottom: 50px;
+	}
+
+	&__fields {
+		display: grid;
+		gap: 10px;
+		margin: 0 0 20px 0;
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	&__content {
+		color: #fff;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 300px 200px;
+		gap: 30px;
+	}
+
+	&__right {
+		display: grid;
+		gap: 10px;
+	}
+}
+
+/* Стили для панели модального окна */
+/* Обертка, в которой содержится контент модального окна */
+.DialogPanel {
+}
+
+/* Стили для заголовка модального окна */
+.DialogTitle {
+	/* Цвет текста */
+}
+
+/* Стили для содержимого модального окна */
+.DialogContent {
+	/* Цвет текста */
+}
+
+.info {
+	margin-bottom: 20px;
+	display: grid;
+	gap: 12px;
+	&__name {
+		display: grid;
+		gap: 4px;
+	}
+
+	&__image {
+		position: relative;
+		height: 200px;
+
+		margin-bottom: 20px;
+		img {
+			border-radius: 8px;
+			object-fit: cover;
+		}
+
+		span {
+			display: block;
+			background-color: #121212;
+		}
+	}
+
+	&__value {
+		color: #ccc;
+		margin-bottom: 7px;
+	}
+}

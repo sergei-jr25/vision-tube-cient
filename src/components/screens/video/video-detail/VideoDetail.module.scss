@@ -1,0 +1,38 @@
+.detail {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	gap: 30px;
+	background-color: #121212;
+	padding: 15px;
+	border-radius: 8px;
+	&__name {
+		margin-bottom: 20px;
+		color: #ccc;
+	}
+
+	&__description {
+		color: #4c4c4c;
+	}
+
+	&__body {
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 30px;
+	}
+
+	&__info {
+		display: grid;
+		gap: 10px;
+	}
+
+	&__value {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		color: #4c4c4c;
+	}
+}

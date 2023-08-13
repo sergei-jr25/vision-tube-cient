@@ -1,0 +1,33 @@
+input {
+	outline: none;
+	border: none;
+}
+
+input:focus {
+	outline: none;
+	border: none;
+}
+textarea {
+	outline: none;
+	border: none;
+	resize: none;
+}
+
+textarea:focus {
+	outline: none;
+	border: none;
+}
+
+button {
+	outline: none;
+	border: none;
+	color: #fbfafc;
+	background-color: none;
+}
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	padding: 0;
+}

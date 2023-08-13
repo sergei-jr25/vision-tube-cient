@@ -1,0 +1,18 @@
+.videoEdit {
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 400px;
+		gap: 50px;
+	}
+
+	&__fields {
+		display: grid;
+		gap: 20px;
+		margin-bottom: 30px;
+	}
+
+	&__uploads {
+		display: grid;
+		gap: 20px;
+	}
+}

@@ -1,0 +1,12 @@
+.field {
+	display: grid;
+	gap: 5px;
+	width: 100%;
+
+	input {
+		width: 100%;
+		padding: 8px 10px;
+		background-color: #343434;
+		border-radius: 3px;
+	}
+}

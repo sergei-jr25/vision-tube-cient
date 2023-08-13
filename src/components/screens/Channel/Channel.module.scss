@@ -1,0 +1,10 @@
+.channel {
+	display: grid;
+	gap: 15px;
+
+	&__description {
+		margin: 25px 0;
+		color: gray;
+		font-weight: 500;
+	}
+}

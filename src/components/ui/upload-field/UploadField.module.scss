@@ -1,0 +1,25 @@
+.uploadFiled {
+	&__label {
+		span {
+			padding: 8px;
+			background-color: #fbfafc;
+			border-radius: 8px;
+			color: blue;
+			font-weight: 600;
+			font-size: 14px;
+			cursor: pointer;
+			display: inline-block;
+		}
+		input {
+			position: absolute;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+		}
+	}
+
+	&__info {
+		color: #ccc;
+	}
+}

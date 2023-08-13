@@ -1,0 +1,15 @@
+.button {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 8px 15px;
+	font-weight: 600;
+	text-align: center;
+	background-color: #232323;
+	border-radius: 8px;
+	color: #fbfafc;
+
+	&_subscribe {
+		background-color: #676767;
+	}
+}

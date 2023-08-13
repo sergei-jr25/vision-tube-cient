@@ -1,0 +1,30 @@
+.comments {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	background-color: #121212;
+	padding: 15px 20px;
+	border: 5px;
+	border-radius: 8px;
+	&__title {
+		color: #fbfafc;
+		margin: 0 0 10px 0;
+		padding: 0 0 10px 0;
+		border-bottom: 2px solid #545454;
+	}
+
+	&__items {
+	}
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	background-color: #232323;
+	border-radius: 5px;
+	gap: 5px;
+	padding: 10px;
+	input {
+		background-color: transparent !important;
+		padding: 0 !important;
+	}
+}

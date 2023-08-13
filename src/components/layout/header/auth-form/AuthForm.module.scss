@@ -1,0 +1,28 @@
+.authform {
+	position: relative;
+	&__button {
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&__body {
+		display: grid;
+		padding: 10px 15px;
+		gap: 10px;
+		position: absolute;
+		z-index: 9;
+		top: 45px;
+		left: -150px;
+		background-color: #121212;
+		border-radius: 8px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		gap: 10x;
+		flex-wrap: wrap;
+	}
+}

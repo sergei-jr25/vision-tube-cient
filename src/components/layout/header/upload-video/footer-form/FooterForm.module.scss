@@ -1,0 +1,27 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__icon {
+		svg {
+			fill: coral;
+		}
+	}
+
+	&__text {
+		color: #ccc;
+	}
+
+	&__button {
+		padding: 8px 15px;
+		background-color: chocolate;
+		font-weight: 600;
+		color: #fbfafc;
+		border-radius: 8px;
+	}
+}
