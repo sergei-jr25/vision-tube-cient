@@ -33,7 +33,7 @@ const ProfileMenu: FC = () => {
 					width={40}
 					height={40}
 					alt={data.name || ''}
-					src={`http://localhost:3000/uploads/default/${data.avatarPath}`}
+					src={data.avatarPath}
 				/>
 			) : (
 				<RxAvatar />

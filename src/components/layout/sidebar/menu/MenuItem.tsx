@@ -27,7 +27,7 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 		>
 			{item.image && (
 				<Image
-					src={`http://localhost:3000/uploads/default/${item.image}`}
+					src={item.image}
 					width={40}
 					height={40}
 					alt={item.name}
