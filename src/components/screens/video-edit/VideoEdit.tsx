@@ -22,8 +22,6 @@ const VideoEdit: FC<{ id?: number }> = ({ id }) => {
 		skip: !videoId
 	})
 
-	console.log(data)
-
 	const [updateVideo, { isLoading: isUpdateLoading }] =
 		videoApi.useUpdateVideoMutation()
 	const {

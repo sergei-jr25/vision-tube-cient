@@ -17,8 +17,6 @@ const AddComment: FC<{ videoId: number }> = ({ videoId }) => {
 	const [writeComment, { isLoading }] = commentApi.useCreateCommentMutation()
 
 	const onSubmit: SubmitHandler<ICommentDto> = async data => {
-		console.log({ ...data, videoId })
-
 		writeComment({ ...data, videoId })
 			.unwrap()
 			.then(() => reset())

@@ -7,8 +7,6 @@ const ChannelInfoSmall: FC<{
 	channel: IUser | undefined
 	message?: string
 }> = ({ channel, message }) => {
-	console.log(channel)
-
 	return (
 		<div className={styles.infosmall}>
 			<div className={styles.infosmall__avatar}>

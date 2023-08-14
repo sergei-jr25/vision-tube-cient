@@ -8,8 +8,6 @@ import styles from './Channel.module.scss'
 import { IChannel } from './channel.inreface'
 
 const Channel: FC<IChannel> = ({ channel }) => {
-	console.log('channel', channel)
-
 	return (
 		<div className={styles.channel}>
 			<div className={styles.channel__profile}>

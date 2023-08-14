@@ -9,7 +9,7 @@ type Props = {
 
 async function getData(id: number) {
 	const { data } = await axios.get(
-		`http://localhost:5000/api/users/by-id/${Number(id)}`
+		`${process.env.APP_URL}/users/by-id/${Number(id)}`
 	)
 
 	return data

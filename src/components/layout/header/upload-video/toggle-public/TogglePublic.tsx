@@ -8,8 +8,6 @@ interface ITogglePublic {
 	clickHandler: () => void
 }
 const TogglePublic: FC<ITogglePublic> = ({ clickHandler, isEnabled }) => {
-	console.log('isEnabled', isEnabled)
-
 	return (
 		<div className={styles.toggle}>
 			<Switch onChange={clickHandler} checked={isEnabled}>

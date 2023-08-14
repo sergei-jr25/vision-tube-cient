@@ -18,8 +18,6 @@ const AuthForm: FC = () => {
 	const { handleSubmit, register, formState } = useForm({ mode: 'onChange' })
 
 	const onSubmit = (data: any) => {
-		console.log(data)
-
 		if (type === 'login') login(data)
 		if (type === 'register') registerAction(data)
 	}

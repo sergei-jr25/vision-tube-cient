@@ -10,7 +10,6 @@ const SubscribeButton: FC<{ channelIdFromSubscribe: number }> = ({
 	channelIdFromSubscribe
 }) => {
 	const { user } = useAuth()
-	console.log('channelIdFromSubscribe', channelIdFromSubscribe)
 
 	const { data: profile } = api.useGetProfileQuery(null, { skip: !user })
 	const [subscribe, { isLoading, data }] = api.useSubscribeToChannelMutation()
@@ -20,9 +19,6 @@ const SubscribeButton: FC<{ channelIdFromSubscribe: number }> = ({
 		profile?.subscriptions?.some(
 			sub => sub.toChannel.id === channelIdFromSubscribe
 		) || !!data
-
-	console.log('profile', profile)
-	console.log('channelIdFromSubscribe', channelIdFromSubscribe)
 
 	return (
 		<Button

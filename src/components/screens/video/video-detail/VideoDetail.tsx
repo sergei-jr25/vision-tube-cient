@@ -11,8 +11,6 @@ import { RiHeart2Fill } from 'react-icons/ri'
 import styles from './VideoDetail.module.scss'
 
 const VideoDetail: FC<{ video: IVideo }> = ({ video }) => {
-	console.log('video', video.id)
-
 	const [updateLike, { isLoading: isLikeLoading }] =
 		videoApi.useUpdateLikesMutation()
 	return (

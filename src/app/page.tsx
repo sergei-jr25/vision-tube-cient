@@ -3,9 +3,9 @@ import { IVideo } from '@/types/video.interface'
 import axios from 'axios'
 
 async function getData() {
-	const newVideos = await axios.get<IVideo[]>('http://localhost:5000/api/video')
+	const newVideos = await axios.get<IVideo[]>(`${process.env.APP_URL}/video`)
 	const popluarVideo = await axios.get<IVideo[]>(
-		'http://localhost:5000/api/video/most-popular'
+		`${process.env.APP_URL}/video/most-popular`
 	)
 	return {
 		newVideos,
@@ -18,7 +18,10 @@ export default async function Page() {
 
 	return (
 		<main>
-			<Home newVideos={newVideos.data} topVideo={popluarVideo.data} />
+			<Home
+				newVideos={newVideos.data || []}
+				topVideo={popluarVideo.data || []}
+			/>
 		</main>
 	)
 }

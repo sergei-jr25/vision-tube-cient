@@ -7,9 +7,7 @@ type Props = {
 	}
 }
 async function getData(id: number) {
-	const { data } = await axios.get(
-		`http://localhost:5000/api/video/${Number(id)}`
-	)
+	const { data } = await axios.get(`${process.env.APP_URL}/video/${Number(id)}`)
 
 	return data
 }
