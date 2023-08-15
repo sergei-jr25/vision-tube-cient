@@ -13,7 +13,7 @@ export const videoApi = api.injectEndpoints({
 		}),
 		getVideoPrivate: builder.query<IVideo, number>({
 			query: videoId => ({
-				url: getVideoPath(`/comments/${videoId}`)
+				url: getVideoPath(`/get-private/${videoId}`)
 			}),
 			providesTags: (result, error, videoId) => [{ type: 'Video', videoId }]
 		}),
@@ -37,14 +37,14 @@ export const videoApi = api.injectEndpoints({
 		}),
 		updateViews: builder.mutation<IVideo, number>({
 			query: id => ({
-				url: getVideoPath(`/albums/${id}`),
+				url: getVideoPath(`/update-views/${id}`),
 				method: 'PUT'
 			}),
 			invalidatesTags: (result, error, id) => [{ type: 'Video', id }]
 		}),
 		updateLikes: builder.mutation<IVideo, number>({
 			query: id => ({
-				url: getVideoPath(`/albums/${id}`),
+				url: getVideoPath(`/update-likes/${id}`),
 				method: 'PUT'
 			}),
 			invalidatesTags: (result, error, id) => [{ type: 'Video', id }]

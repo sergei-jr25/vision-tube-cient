@@ -3,7 +3,9 @@ import { IVideo } from '@/types/video.interface'
 import axios from 'axios'
 
 async function getData() {
-	const { data } = await axios.get<IVideo[]>(`${process.env.APP_URL}/comments`)
+	const { data } = await axios.get<IVideo[]>(
+		`${process.env.APP_URL}/video/most-popular`
+	)
 	return data
 }
 

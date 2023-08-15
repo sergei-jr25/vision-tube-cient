@@ -11,11 +11,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/uploads/:path*',
-				destination: 'http://dpg-cjd0cr7db61s73ak8ol0-a/uploads/:path*'
+				destination: `${process.env.APP_URL}/uploads/:path*`
 			},
 			{
 				source: '/api/:path*',
-				destination: 'http://dpg-cjd0cr7db61s73ak8ol0-a/api/:path*'
+				destination: `${process.env.APP_URL}/api/:path*`
 			}
 		]
 	}
