@@ -1,4 +1,3 @@
-import { API_UPLOAD_IMG } from '@/api/http'
 import { IUser } from '@/types/user.interface'
 import cn from 'clsx'
 import Image from 'next/image'
@@ -18,7 +17,7 @@ const UserAvatar: FC<{ user: IUser; isWhite?: boolean }> = ({
 					<Image
 						fill
 						alt={user.name}
-						src={`${API_UPLOAD_IMG}/default/${user.avatarPath}`}
+						src={user.avatarPath}
 						className={styles.avatar__image}
 					/>
 				</Link>

@@ -18,12 +18,12 @@ export const api = createApi({
 	}),
 	endpoints: builder => ({
 		getProfile: builder.query<IUser, any>({
-			query: () => getUserPath('/profile'),
+			query: () => getUserPath('/posts'),
 			providesTags: () => [{ type: 'Profile' }]
 		}),
 		subscribeToChannel: builder.mutation<boolean, number>({
 			query: channelId => ({
-				url: getUserPath(`/subscribe/${channelId}`),
+				url: getUserPath(`/posts/${channelId}`),
 				method: 'PATCH'
 			}),
 			invalidatesTags: () => [{ type: 'Profile' }]

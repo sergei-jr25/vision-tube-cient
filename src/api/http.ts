@@ -1,9 +1,6 @@
 import axios from 'axios'
 import { getContentType } from './api.helper'
 
-export const API_URL = `${process.env.APP_URL}/api`
-export const API_UPLOAD_IMG = `${process.env.APP_URL}/uploads`
-
 export const http = axios.create({
 	baseURL: process.env.APP_URL,
 	headers: getContentType()
