@@ -2,13 +2,12 @@ import { getUserPath } from '@/config/url.config'
 import { TypeRootStore } from '@/store/store'
 import { IUser } from '@/types/user.interface'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { API_URL } from '../../api/http'
 
 export const api = createApi({
 	reducerPath: 'api',
 	tagTypes: ['Video', 'Profile'],
 	baseQuery: fetchBaseQuery({
-		baseUrl: API_URL,
+		baseUrl: process.env.APP_URL,
 		prepareHeaders: (headers, { getState }) => {
 			const token = (getState() as TypeRootStore).auth.accessToken
 
