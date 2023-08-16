@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	poweredByHeader: false.valueOf,
+	poweredByHeader: false,
 	env: {
-		APP_URL: process.env.REACT_APP_URL
+		APP_URL: process.env.NEXT_PUUBLIC_REACT_APP_URL
 	},
 	images: {
 		domains: ['localhost']
@@ -10,12 +10,12 @@ const nextConfig = {
 	async rewrites() {
 		return [
 			{
-				source: '/uploads/:path*',
-				destination: `${process.env.APP_URL}/uploads/:path*`
+				source: '/public/:path*',
+				destination: `${process.env.NEXT_PUUBLIC_REACT_APP_URL}/public/:path*`
 			},
 			{
 				source: '/api/:path*',
-				destination: `${process.env.APP_URL}/api/:path*`
+				destination: `${process.env.NEXT_PUUBLIC_REACT_APP_URL}/api/:path*`
 			}
 		]
 	}

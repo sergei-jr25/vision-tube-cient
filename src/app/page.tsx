@@ -15,6 +15,7 @@ async function getData() {
 
 export default async function Page() {
 	const { newVideos, popluarVideo } = await getData()
+console.log(newVideos);
 
 	return (
 		<main>
