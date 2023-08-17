@@ -8,9 +8,11 @@ import styles from './VideoItem.module.scss'
 import VideoStatistics from './VideoStatistics'
 
 const VideoLarge: FC<{ video: IVideo }> = ({ video }) => {
+	console.log(video)
+
 	return (
 		<div className={styles.videoLarge}>
-			{video.thumbnailPath && (
+			{video && video.thumbnailPath && (
 				<Image
 					fill
 					alt={video.name}
@@ -19,8 +21,8 @@ const VideoLarge: FC<{ video: IVideo }> = ({ video }) => {
 				/>
 			)}
 			<div className={styles.videoLarge__body}>
-				<Link className={styles.videoLarge__videoname} href={`/v/${video.id}`}>
-					{video.name}
+				<Link className={styles.videoLarge__videoname} href={`/v/${video?.id}`}>
+					{video?.name}
 				</Link>
 				{video?.user?.avatarPath && <UserAvatar user={video.user} isWhite />}
 

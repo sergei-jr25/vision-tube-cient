@@ -11,10 +11,10 @@ const Discover: FC<IDiscover> = ({ randomVideo, topVideo }) => {
 	return (
 		<div className={styles.discover}>
 			<div className={styles.top_video}>
-				<VideoLarge video={randomVideo} />
+				{randomVideo && <VideoLarge video={randomVideo} />}
 			</div>
 			<div className={styles.random_video}>
-				<VideoLarge video={topVideo} />
+				{topVideo && <VideoLarge video={topVideo} />}
 			</div>
 		</div>
 	)
