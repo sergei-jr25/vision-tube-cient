@@ -2,7 +2,8 @@
 const nextConfig = {
 	poweredByHeader: false,
 	env: {
-		APP_URL: process.env.NEXT_PUUBLIC_REACT_APP_URL
+		APP_URL: process.env.NEXT_PUUBLIC_REACT_APP_URL,
+		PUBLIC_URL: process.env.NEXT_PUUBLIC_REACT_APP_PUBLIC
 	},
 	images: {
 		domains: ['localhost']
@@ -11,11 +12,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/public/:path*',
-				destination: `${process.env.NEXT_PUUBLIC_REACT_APP_URL}/public/:path*`
+				destination: `${process.env.NEXT_PUUBLIC_REACT_APP_PUBLIC}/:path*`
 			},
 			{
 				source: '/api/:path*',
-				destination: `${process.env.NEXT_PUUBLIC_REACT_APP_URL}/api/:path*`
+				destination: `${process.env.NEXT_PUUBLIC_REACT_APP_URL}/:path*`
 			}
 		]
 	}

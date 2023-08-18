@@ -13,9 +13,11 @@
 		gap: 10px;
 		position: absolute;
 		z-index: 9;
+		width: 300px;
+
 		top: 45px;
-		left: -150px;
-		background-color: #121212;
+		right: -100%;
+		background-color: #212121;
 		border-radius: 8px;
 	}
 
@@ -24,5 +26,6 @@
 		justify-content: space-between;
 		gap: 10x;
 		flex-wrap: wrap;
+		margin: 15px 0 0 0;
 	}
 }

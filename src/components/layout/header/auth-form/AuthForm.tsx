@@ -4,6 +4,7 @@ import { useAction } from '@/hooks/useAction'
 import { useAuth } from '@/hooks/useAuth'
 import { useOutside } from '@/hooks/useOtside'
 import { validateEmail } from '@/utils/regex'
+import { motion } from 'framer-motion'
 import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { CgProfile } from 'react-icons/cg'
@@ -25,53 +26,59 @@ const AuthForm: FC = () => {
 		<div className={styles.authform}>
 			<button
 				className={styles.authform__button}
-				ref={ref}
 				onClick={() => setIsShow(!isShow)}
 			>
 				<CgProfile />
 			</button>
 			{isShow && (
-				<form
-					className={styles.authform__body}
-					onSubmit={handleSubmit(onSubmit)}
+				<motion.div
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: isShow ? 1 : 0, y: isShow ? 0 : -20 }}
+					transition={{ duration: 0.3 }}
 				>
-					<Field
-						{...register('email', {
-							pattern: {
-								value: validateEmail,
-								message: 'Введите корректный email'
-							}
-						})}
-						placeholder='email'
-						type='email'
-					/>
-					<Field
-						{...register('password', {
-							minLength: {
-								value: 6,
-								message: 'Пароль должен быть не менее 6 символов'
-							}
-						})}
-						placeholder='password'
-						type='password'
-					/>
-					<div className={styles.authform__buttons}>
-						<Button
-							className={styles.authform__button}
-							onClick={() => setType('login')}
-							disabled={isLoading}
-						>
-							Войти
-						</Button>
-						<Button
-							className={styles.authform__button}
-							onClick={() => setType('register')}
-							disabled={isLoading}
-						>
-							Регистрация
-						</Button>
-					</div>
-				</form>
+					<form
+						className={styles.authform__body}
+						onSubmit={handleSubmit(onSubmit)}
+						ref={ref}
+					>
+						<Field
+							{...register('email', {
+								pattern: {
+									value: validateEmail,
+									message: 'Введите корректный email'
+								}
+							})}
+							placeholder='email'
+							type='email'
+						/>
+						<Field
+							{...register('password', {
+								minLength: {
+									value: 6,
+									message: 'Пароль должен быть не менее 6 символов'
+								}
+							})}
+							placeholder='password'
+							type='password'
+						/>
+						<div className={styles.authform__buttons}>
+							<Button
+								className={styles.authform__button}
+								onClick={() => setType('login')}
+								disabled={isLoading}
+							>
+								Войти
+							</Button>
+							<Button
+								className={styles.authform__button}
+								onClick={() => setType('register')}
+								disabled={isLoading}
+							>
+								Регистрация
+							</Button>
+						</div>
+					</form>
+				</motion.div>
 			)}
 		</div>
 	)

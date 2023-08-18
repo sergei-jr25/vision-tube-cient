@@ -1,11 +1,20 @@
 'use client'
 
+import { useAuth } from '@/hooks/useAuth'
 import { videoApi } from '@/services/api/video.api'
+import { useRouter } from 'next/navigation'
 import { FC } from 'react'
 import Catalog from '../Home/catalog/Catalog'
 
 const Studio: FC = () => {
-	const { data, isLoading } = videoApi.useGetProfileQuery(null)
+	const { user } = useAuth()
+	const { data, isLoading } = videoApi.useGetProfileQuery(null, { skip: !user })
+	const { replace } = useRouter()
+
+	if (!data) {
+		replace('/')
+		return null
+	}
 	const [removeVideo] = videoApi.useDeleteVideoMutation()
 
 	const videos = data?.videos

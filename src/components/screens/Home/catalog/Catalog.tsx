@@ -17,14 +17,15 @@ const Catalog: FC<ICatalog> = ({ newVideos, isUpdateLink, removeHandler }) => {
 			</div>
 
 			<div className={styles.catalog__items}>
-				{newVideos.map(video => (
-					<VideoItem
-						video={video}
-						key={video.id}
-						removeHandler={removeHandler}
-						isUpdateLink={isUpdateLink}
-					/>
-				))}
+				{newVideos &&
+					newVideos.map(video => (
+						<VideoItem
+							video={video}
+							key={video.id}
+							removeHandler={removeHandler}
+							isUpdateLink={isUpdateLink}
+						/>
+					))}
 			</div>
 		</div>
 	)

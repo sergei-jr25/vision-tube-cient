@@ -17,6 +17,7 @@ const VideoItem: FC<IVideoItem> = ({
 	removeHandler
 }) => {
 	const { push } = useRouter()
+	console.log(video)
 
 	return (
 		<div className={cn(styles.video_item, { [styles.small]: isSmall })}>
@@ -40,14 +41,16 @@ const VideoItem: FC<IVideoItem> = ({
 			<div className={styles.video_item__thumbNail}></div>
 
 			<div className={styles.video_item__images}>
-				<Link href={`/v/${video.id}`}>
-					<Image
-						fill
-						alt={video.name}
-						src={video.thumbnailPath || ''}
-						className={styles.video_item__image}
-					/>
-				</Link>
+				{video.thumbnailPath && (
+					<Link href={`/v/${video.id}`}>
+						<Image
+							fill
+							alt={video.name}
+							src={video.thumbnailPath || ''}
+							className={styles.video_item__image}
+						/>
+					</Link>
+				)}
 				<div className={styles.video_item__avatar}>
 					{video?.user?.avatarPath && <UserAvatar user={video.user} />}
 				</div>

@@ -33,6 +33,7 @@
 		width: 180px;
 		right: 0;
 		display: grid;
+		border-radius: 8px;
 
 		gap: 10px;
 		background-color: #565656;
@@ -56,5 +57,18 @@
 		&:hover {
 			border-bottom: 1px solid #ffcf62;
 		}
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: #591211;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-weight: 600;
+		font-size: 18px;
 	}
 }

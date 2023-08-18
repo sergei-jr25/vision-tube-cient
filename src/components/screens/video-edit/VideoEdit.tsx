@@ -5,6 +5,7 @@ import Button from '@/components/ui/Button/Button'
 import Field from '@/components/ui/Field/Field'
 import TextArea from '@/components/ui/Textarea/Textarea'
 import UploadField from '@/components/ui/upload-field/UploadField'
+import { useAuth } from '@/hooks/useAuth'
 import { videoApi } from '@/services/api/video.api'
 import { IMediaResponse } from '@/services/media/media.interface'
 import { IVideoDto } from '@/types/video.interface'
@@ -15,7 +16,12 @@ import { toastr } from 'react-redux-toastr'
 import styles from './VideoEdit.module.scss'
 
 const VideoEdit: FC<{ id?: number }> = ({ id }) => {
-	const { push } = useRouter()
+	const { user } = useAuth()
+	const { push, replace } = useRouter()
+	if (!user) {
+		replace('/')
+		return null
+	}
 	const videoId = Number(id)
 
 	const { data, isLoading } = videoApi.useGetVideoByIdQuery(videoId, {

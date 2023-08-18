@@ -8,7 +8,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { GoChevronDown, GoChevronUp } from 'react-icons/go'
-import { RxAvatar } from 'react-icons/rx'
 import styles from './ProfileMenu.module.scss'
 
 const ProfileMenu: FC = () => {
@@ -36,7 +35,7 @@ const ProfileMenu: FC = () => {
 					src={data.avatarPath}
 				/>
 			) : (
-				<RxAvatar />
+				<span className={styles.profile__icon}>{user?.email.slice(0, 1)}</span>
 			)}
 
 			<span className={styles.profile__name}>{data?.name}</span>
@@ -49,7 +48,7 @@ const ProfileMenu: FC = () => {
 				transition={{ duration: 0.3 }}
 			>
 				{isShow && (
-					<div className={styles.profile__body}>
+					<div className={styles.profile__body} ref={ref}>
 						<ul className={styles.profile__list}>
 							<li className={styles.profile__item}>
 								<Link href={`/c/${data?.id}`}>Мой канал</Link>

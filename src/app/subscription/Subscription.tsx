@@ -1,14 +1,16 @@
 'use client'
 import Menu from '@/components/layout/sidebar/menu/Menu'
+import { useAuth } from '@/hooks/useAuth'
 import { api } from '@/services/api/api'
 import { FC } from 'react'
 
 const Subscription: FC = () => {
-	const { data: profile } = api.useGetProfileQuery(null)
+	const { user } = useAuth()
+	const { data: profile } = api.useGetProfileQuery(null, { skip: !user })
 
 	return (
 		<>
-			{profile?.subscribers.length && (
+			{profile?.subscribers ? (
 				<Menu
 					title='Мои подписки'
 					items={
@@ -19,6 +21,8 @@ const Subscription: FC = () => {
 						})) || []
 					}
 				/>
+			) : (
+				<div>Вы не на кого не подписанны</div>
 			)}
 		</>
 	)

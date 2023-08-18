@@ -16,9 +16,7 @@ const Menu: FC<IMenu> = ({ items, title }) => {
 			<h3 className={styles.menu__title}>{title}</h3>
 			<ul className={styles.menu__list}>
 				{items.map(item => (
-					<li className={styles.menu__item} key={item.link}>
-						<MenuItem item={item} />
-					</li>
+					<MenuItem key={item.link} item={item} />
 				))}
 			</ul>
 		</div>
