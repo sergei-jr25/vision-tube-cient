@@ -1,6 +1,6 @@
 import { getUserPath } from '@/config/url.config'
 import { TypeRootStore } from '@/store/store'
-import { IUser } from '@/types/user.interface'
+import { IProfileDto, IUser } from '@/types/user.interface'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const api = createApi({
@@ -20,6 +20,14 @@ export const api = createApi({
 		getProfile: builder.query<IUser, any>({
 			query: () => getUserPath('/profile'),
 			providesTags: () => [{ type: 'Profile' }]
+		}),
+		editProfile: builder.mutation<IUser, IProfileDto>({
+			query: ({ id, ...body }) => ({
+				url: getUserPath(`/${id}`),
+				method: 'PUT',
+				body: body
+			}),
+			invalidatesTags: () => [{ type: 'Profile' }]
 		}),
 		subscribeToChannel: builder.mutation<boolean, number>({
 			query: channelId => ({

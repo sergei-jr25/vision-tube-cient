@@ -4,6 +4,8 @@ import styles from './Field.module.scss'
 
 const Field = forwardRef<HTMLInputElement, IField>(
 	({ error, placeholder, type = 'text', ...rest }, ref) => {
+		console.log(error)
+
 		return (
 			<>
 				<label className={styles.field}>

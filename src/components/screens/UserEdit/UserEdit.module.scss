@@ -1,0 +1,36 @@
+.userEdit {
+	&__title {
+		margin-bottom: 30px;
+	}
+	&__form {
+		max-width: 500px;
+		display: grid;
+		gap: 15px;
+	}
+
+	&__picture {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__image {
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	&__button {
+		margin-top: 15px;
+		padding: 12px 6px;
+		text-align: center;
+		justify-self: start;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		background-color: #333;
+		border-radius: 8px;
+		color: #fff;
+
+		&:hover {
+			background-color: #5555;
+		}
+	}
+}
