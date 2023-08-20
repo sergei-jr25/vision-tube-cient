@@ -1,12 +1,13 @@
 import Trending from '@/components/screens/Trednding/Trending'
-import { IVideo } from '@/types/video.interface'
-import axios from 'axios'
 
 async function getData() {
-	const { data } = await axios.get<IVideo[]>(
-		`${process.env.APP_URL}/video/most-popular`
+	const resPopluarVideo = await fetch(
+		`${process.env.APP_URL}/video/most-popular`,
+		{
+			next: { revalidate: 60 }
+		}
 	)
-	return data
+	return resPopluarVideo.json()
 }
 
 export default async function Page() {

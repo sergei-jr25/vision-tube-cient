@@ -1,5 +1,4 @@
 import Channel from '@/components/screens/Channel/Channel'
-import axios from 'axios'
 
 type Props = {
 	params: {
@@ -8,11 +7,9 @@ type Props = {
 }
 
 async function getData(id: number) {
-	const { data } = await axios.get(
-		`${process.env.APP_URL}/users/by-id/${Number(id)}`
-	)
+	const data = await fetch(`${process.env.APP_URL}/users/by-id/${Number(id)}`)
 
-	return data
+	return data.json()
 }
 
 const ChannelPage = async ({ params: { id } }: Props) => {
