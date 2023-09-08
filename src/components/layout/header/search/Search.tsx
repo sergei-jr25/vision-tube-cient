@@ -1,3 +1,5 @@
+'use client'
+
 import VideoItem from '@/components/ui/video-item/VideoItem'
 import { FC } from 'react'
 import styles from './Search.module.scss'

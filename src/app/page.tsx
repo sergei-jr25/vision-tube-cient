@@ -1,8 +1,7 @@
 import Home from '@/components/screens/Home/Home'
 
 async function getData() {
-	// const newVideos = await axios.get<IVideo[]>(`${process.env.APP_URL}/video`)
-	const resNewVideos = await fetch(`${process.env.APP_URL}/video`, {
+ 	const resNewVideos = await fetch(`${process.env.APP_URL}/video`, {
 		next: { revalidate: 60 }
 	})
 	const resPopluarVideo = await fetch(

@@ -1,3 +1,5 @@
+'use client'
+
 import { useAuth } from '@/hooks/useAuth'
 import { FC } from 'react'
 import AuthForm from '../auth-form/AuthForm'

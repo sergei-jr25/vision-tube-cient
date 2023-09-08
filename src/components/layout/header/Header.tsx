@@ -1,5 +1,3 @@
-'use client'
-
 import { FC } from 'react'
 import styles from './Header.module.scss'
 import IconRight from './icon-right/IconRight'

@@ -19,8 +19,7 @@ const VideoItem: FC<IVideoItem> = ({
 	removeHandler
 }) => {
 	const { push } = useRouter()
-	console.log(video)
-
+ 
 	return (
 		<div className={cn(styles.video_item, { [styles.small]: isSmall })}>
 			{!!removeHandler && (

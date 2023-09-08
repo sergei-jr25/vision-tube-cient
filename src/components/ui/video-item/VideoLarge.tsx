@@ -8,8 +8,6 @@ import styles from './VideoItem.module.scss'
 import VideoStatistics from './VideoStatistics'
 
 const VideoLarge: FC<{ video: IVideo }> = ({ video }) => {
-	console.log(video)
-
 	return (
 		<div className={styles.videoLarge}>
 			{video && video.thumbnailPath && (
