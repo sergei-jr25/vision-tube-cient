@@ -48,6 +48,6 @@
 		"src/components/screens/video/video-player/VideoPlayer.module.scss",
 		"src/components/ui/upload-field/UploadField.module.scss",
 		"src/components/layout/header/upload-video/footer-form/FooterForm.module.scss"
-, "src/components/screens/UserEdit/UserEdit copy.module.scss"	],
+, "src/components/screens/UserEdit/UserEdit copy.module.scss", "src/app/auth/Auth.module.scss"	],
 	"exclude": ["node_modules"]
 }

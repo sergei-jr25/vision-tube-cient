@@ -22,10 +22,11 @@ const AuthForm: FC = () => {
 	} = useForm({ mode: 'onChange' })
 
 	const onSubmit = (data: any) => {
+		console.log('data', data)
+		console.log('type', type)
+
 		if (type === 'login') login(data)
 		if (type === 'register') registerAction(data)
-
-		console.log('data', data)
 	}
 	return (
 		<div className={styles.authform}>
@@ -46,7 +47,7 @@ const AuthForm: FC = () => {
 							required: true,
 							pattern: {
 								value: validateEmail,
-								
+
 								message: 'Введите корректный email'
 							}
 						})}

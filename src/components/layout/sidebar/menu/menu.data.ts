@@ -1,4 +1,11 @@
-import { HiChartBar, HiCollection, HiHome, HiStar } from 'react-icons/hi'
+import {
+	HiChartBar,
+	HiCollection,
+	HiHome,
+	HiStar,
+	HiUser
+} from 'react-icons/hi'
+
 import { IMenuItem } from './menu.interface'
 
 export const menuData: IMenuItem[] = [
@@ -21,5 +28,10 @@ export const menuData: IMenuItem[] = [
 		name: 'Мои подписки',
 		link: '/subscription',
 		icon: HiCollection
+	},
+	{
+		name: 'Аунтефикация',
+		link: '/auth',
+		icon: HiUser
 	}
 ]
