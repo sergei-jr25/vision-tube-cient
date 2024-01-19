@@ -1,3 +1,29 @@
+
+Видео платформа на Next.js
+
+Проект представляет собой неьольшой вдиео хостнг, разработанный с использованием фреймворка Next.js.  
+Фунционал проекта включает: 
+1 - Регистрация и Авторизация Пользователей:
+2 - Добавление Видео 
+3 - Сохранение Видео в Избранное
+4 - Комментирование Видео
+5 - Подписка на Канал
+
+Technology stack:
+React 
+Next.js 
+Redux Toolkit 
+React-Query 
+React-Hook-Form 
+Swiper 
+Sass 
+Axios 
+TypeScript 
+
+
+
+Для администраторов предусмотрены функции управления контентом, такие как добавление, редактирование и удаление фильмов, жанров и информации об актерах и пользователей.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
