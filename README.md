@@ -21,9 +21,6 @@ Technology stack:
 - TypeScript, 
 
 
-
-Для администраторов предусмотрены функции управления контентом, такие как добавление, редактирование и удаление фильмов, жанров и информации об актерах и пользователей.
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
