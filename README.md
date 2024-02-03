@@ -1,6 +1,8 @@
 
 Видео платформа на Next.js
 
+Серверная часть:  https://github.com/sergei-jr25/VisionTubeServ
+
 Проект представляет собой небольшой видеохостинг, разработанный с использованием фреймворка Next.js.  
 Функционал проекта включает: 
 - Регистрация и Авторизация Пользователей,
@@ -22,6 +24,12 @@ Technology stack:
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+#  Installation
+ 
+```bash
+$ npm install
+```
 
 ## Getting Started
 
